@@ -1,0 +1,13 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "loveit" 
+
+
+
+
+
+[params]
+  [params.header]
+    [params.header.title]
+      name = "My cool site this name2"
