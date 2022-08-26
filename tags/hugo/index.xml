@@ -1,0 +1,10 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>hugo - Tag - My New Hugo Site</title><link>http://example.org/tags/hugo/</link><description>hugo - Tag - My New Hugo Site</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 25 Aug 2022 15:35:15 +0800</lastBuildDate><atom:link href="http://example.org/tags/hugo/" rel="self" type="application/rss+xml"/><item><title>01. 為什麼選擇 Hugo 作為 Blog 的原因</title><link>http://example.org/posts/blog-%E5%BB%BA%E7%BD%AE/01-%E7%82%BA%E4%BB%80%E9%BA%BC-hugo-%E4%BD%9C%E7%82%BA-blog-%E7%9A%84%E5%8E%9F%E5%9B%A0/</link><pubDate>Thu, 25 Aug 2022 15:35:15 +0800</pubDate><author>Author</author><guid>http://example.org/posts/blog-%E5%BB%BA%E7%BD%AE/01-%E7%82%BA%E4%BB%80%E9%BA%BC-hugo-%E4%BD%9C%E7%82%BA-blog-%E7%9A%84%E5%8E%9F%E5%9B%A0/</guid><description>我曾經使用過 Google 的部落格，
+傳統部落格的痛點 傳統的部落格有些缺點:
+寫了大量的文章之後，然後網站說關就關 定時備份的文章哪天想要轉換到另一個部落格很麻煩 沒有版本控制 自己架設一個 CRM ? 其實也有很多解法，架設一個 WordPress
+那有沒有可靠又方便備份的
+主要是有幾下幾種考量:</description></item><item><title>03. 怎麼挑選自己想要的主題</title><link>http://example.org/posts/blog-%E5%BB%BA%E7%BD%AE/03-%E6%80%8E%E9%BA%BC%E6%8C%91%E9%81%B8%E8%87%AA%E5%B7%B1%E6%83%B3%E8%A6%81%E7%9A%84%E4%B8%BB%E9%A1%8C/</link><pubDate>Thu, 25 Aug 2022 15:35:15 +0800</pubDate><author>Author</author><guid>http://example.org/posts/blog-%E5%BB%BA%E7%BD%AE/03-%E6%80%8E%E9%BA%BC%E6%8C%91%E9%81%B8%E8%87%AA%E5%B7%B1%E6%83%B3%E8%A6%81%E7%9A%84%E4%B8%BB%E9%A1%8C/</guid><description>如何挑選想要的 Hugo 主題，首先先回歸到一點
+你的部落想想要呈現怎麼樣的風貌
+是要分享自己的心得筆記? 還是技術教學文件?
+我想要分享什麼，有哪些功能我希望給觀看者體驗的。
+我會先尋找自己有那些地方是沒有辦法妥協的。
+參考資料及網站</description></item></channel></rss>
