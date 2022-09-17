@@ -129,7 +129,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       logo = ""
       # title name
       # 标题名称
-      name = "LoveIt"
+      name = "Ken Hong's IT Blog"
       # you can add extra information before the name (HTML format is supported), such as icons
       # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
       pre = "<i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i>"
@@ -197,7 +197,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   [params.app]
     # optional site title override for the app when added to an iOS home screen or Android launcher
     # 当添加到 iOS 主屏幕或者 Android 启动器时的标题, 覆盖默认标题
-    title = "Ken Hong IT's Blog"
+    title = "Ken Hong's IT Blog"
     # whether to omit favicon resource links
     # 是否隐藏网站图标资源链接
     noFavicon = false
@@ -285,7 +285,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # Social config in home page
   # 主页的社交信息设置
   [params.social]
-    GitHub = ""
+    GitHub = "https://github.com/kenhong4134"
     Linkedin = ""
     Twitter = ""
     Instagram = ""
@@ -357,7 +357,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
     Plume = ""
     HackTheBox = ""
     RootMe= ""
-    Email = ""
+    Email = "kenhong4134@gmail.com"
     RSS = ""
 
   # Page global config
@@ -733,7 +733,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # Table Of Contents settings
   # 目录设置
   [markup.tableOfContents]
-    startLevel = 2
+    startLevel = 1
     endLevel = 6
 
 # Sitemap config
@@ -747,7 +747,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 # Permalinks 配置 (https://gohugo.io/content-management/urls/#permalinks)
 [Permalinks]
   # posts = ":year/:month/:filename"
-  posts = ":filename"
+  posts = ":sections/:filename"
 
 # Privacy config (https://gohugo.io/about/hugo-and-gdpr/)
 # 隐私信息配置 (https://gohugo.io/about/hugo-and-gdpr/)
@@ -839,7 +839,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
         post = ""
         name = ""
-        url = "https://github.com/dillonzq/LoveIt"
+        url = "https://github.com/kenhong4134"
         title = "GitHub"
     [languages.en.params]
       [languages.en.params.search]
@@ -867,7 +867,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
           social = true
           disclaimer = ""
       [languages.en.params.social]
-        GitHub = "xxxx"
+        GitHub = "kenhong4134"
         Twitter = "xxxx"
         Instagram = "xxxx"
         Facebook = "xxxx"
@@ -932,7 +932,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
         post = ""
         name = ""
-        url = "https://github.com/dillonzq/LoveIt"
+        url = "https://github.com/kenhong4134"
         title = "GitHub"
     [languages.zh-cn.params]
       [languages.zh-cn.params.search]
@@ -960,7 +960,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
           social = true
           disclaimer = ""
       [languages.zh-cn.params.social]
-        GitHub = "xxxx"
+        GitHub = "kenhong4134"
         Weibo = "xxxx"
         Steam = "xxxx"
         Zhihu = "xxxx"
@@ -1025,7 +1025,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
         post = ""
         name = ""
-        url = "https://github.com/dillonzq/LoveIt"
+        url = "https://github.com/kenhong4134"
         title = "GitHub"
     [languages.zh-tw.params]
       [languages.zh-tw.params.search]
@@ -1048,12 +1048,12 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
           gravatarEmail = ""
           avatarURL = "/images/avatar.png"
           title = ""
-          subtitle = "一个简洁、优雅且高效的 Hugo 主题"
+          subtitle = "一個 IT 的學習筆記"
           typeit = true
           social = true
           disclaimer = ""
       [languages.zh-tw.params.social]
-        GitHub = "xxxx"
+        GitHub = "kenhong4134"
         Weibo = "xxxx"
         Steam = "xxxx"
         Zhihu = "xxxx"
