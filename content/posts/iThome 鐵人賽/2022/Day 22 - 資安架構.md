@@ -1,5 +1,5 @@
 ---
-title: "Day 17 - API Gateway"
+title: "Day 22 - 資安架構"
 date: 2022-10-07T18:56:15+08:00
 draft: false
 tags: [ '14th鐵人賽', 'AWS', 'AWS Shield', 'AWS WAF', 'AWS Firewall Manager' ]
