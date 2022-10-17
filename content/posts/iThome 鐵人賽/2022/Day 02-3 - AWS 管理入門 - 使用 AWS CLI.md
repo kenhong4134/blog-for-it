@@ -1,4 +1,13 @@
+---
+title: "Day 02-2 - AWS 基本管理 & 常見名詞"
+date: 2022-09-17T23:45:17+08:00
+draft: false
+tags: [ '14th鐵人賽', 'AWS', 'AWS CLI' ]
+type: posts
 
+toc:
+  enable: true
+---
 
 [TOC]
 
@@ -116,17 +125,15 @@ unset AWS_PROFILE
 
 
 
-# Hands-on S3 操作
+# (Hands-on) S3 操作
 
-顯示目前目前
+顯示目前目前所有的 bucket
 
 ```
 aws s3 ls
 ```
 
 
-
-如果西
 
 
 

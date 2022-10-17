@@ -1,24 +1,37 @@
-
-
-
+---
+title: "Day 04-1 - IAM 權限管理大師"
+date: 2022-09-19T22:09:11+08:00
+draft: false
+tags: [ '14th鐵人賽', 'AWS', 'AWS IAM' ]
+type: posts
+---
 
 [TOC]
-
-
 
 # IAM
 
 AWS 的 Root 帳號類似於 Linux ，權限非常大。因此在前面建立 AWS 帳號的時候，我特別先另外建一個 IAM User。
 
- **I**dentity and **A**ccess **M**anagement，是 AWS 做身分驗證和授權的基礎設施。
+> 會放在 S3 後面是我們需要有一個 AWS 的服務可以做範例的。
 
-提供以下:
+
+
+ **I**dentity and **A**ccess **M**anagement，是 AWS 做身分驗證和授權的基礎設施。(前面 S3 用到的 ACL，也算在 IAM 的管理裡面)
+
+其擁有以下特點及功能:
 
 - 建立使用者 (實際的使用者或是供應用程式使用)
+  - 也可設定 MFA 和設定使用者密碼規則
 
+- 共用 AWS 資源，並用安全的方式進行存取
+  - 也可授予侷限的功能給特定的使用者
 
+- 暫時授予其他擁有密碼的使用者(如公司網路)操作 AWS 的權限
+- IAM 身分會留下稽核紀錄 (CloudTrail)
+- 最終一致性
+  - IAM 為跨資料中心內多部伺服器來達成高可用性
 
-> 會放在 S3 後面是我們需要有一個 AWS 的服務可以做範例的。
+- 可搭配標籤功能達成 ABAC(Attribute Based Access Control) 的權限控管
 
 
 
@@ -38,9 +51,43 @@ Least Privilege ，AWS 推行的一個看法。
 
 ![img](https://docs.aws.amazon.com/zh_tw/IAM/latest/UserGuide/images/intro-diagram%20_policies_800.png)
 
+這邊官方說了很多種術語:
+- IAM 資源
+  - 使用者、使用者群組、角色、政策等 IAM 定義
+
+- IAM 身分
+  - 用於識別、群組的 IAM 資源
+  - 這些 IAM 可以被附加政策 (Policy) ，包含使用者、使用者群組、角色。
+
+- IAM 實體
+  - 用於驗證的 IAM 資源。其中包含 IAM 使用者跟 IAM 角色
+
+- 委託人
+
+委託人 (Principal) 是指誰向 AWS 索取服務，剩下的可以參考
 
 
-# 許可 (Policy)
+
+
+## 結構設計
+
+```mermaid
+graph LR
+	Policy --> Permission
+	Permission --> IAM_Group[IAM Group]
+	Permission --> Role
+	IAM_Group --> User
+	User --> Password
+	User --> Credential
+	
+	Role --> AWS_Resoure[AWS Resoure]
+	Role --> Other[Other Account User]
+	
+```
+
+
+
+# 政策 (Policy)
 
 Policy 設定為 JSON 格式，主要有五種屬性可以設定。
 
@@ -177,17 +224,18 @@ AWS 有提供一些已經寫好的 Policy，我們舉兩種角色在實務情境
 
 
 
+基本上 Action 裡面紀錄的的是 AWS 的 Permisson 。 
+
+Resource 紀錄的是 ARN，也就是受影響的資源。
+
 
 
 也有以下不同類型:
 
-- 受 AWS 控管
-  - 其中常見職業角色賦予的權限，職務職能 ( Job Function)
-
-
-
-
-
+- 受 AWS 控管的 Policy
+  - 常見的職業角色都有它對應的職務職能 ( Job Function)，依據這些職能去賦予對應的權限
+- 受客戶控管的 Policy
+  - 客戶，也就是指我們這些使用 AWS 的人，自己去設計權限。
 
 
 
@@ -220,75 +268,21 @@ graph LR
 
 # 角色 (Role)
 
-AWS 服務之間要互相溝通，中間需要透過 Role
+角色能被賦予到 AWS 的服務上面。AWS 服務之間要互相溝通，中間需要透過 Role。
 
-
-
-User Groups vs Role?
-
-
-
-
-
-# 驗證機制
-
-
-
-
-
-
-
-# 架構設計
-
-```mermaid
-graph LR
-	Policy --> Permission
-	Permission --> IAM_Group[IAM Group]
-	Permission --> Role
-	IAM_Group --> User
-	User --> Password
-	User --> Credential
-	
-	Role --> AWS_Resoure[AWS Resoure]
-	Role --> Other[Other Account User]
-	
-```
-
-
-
-
-
-
-
-# What's Permissions?
-
-在設定 IAM 帳號的時候有出現，
-
-
-
-這邊有一些受 AWS 控管的 Policy 已經建立好可以使用。
-
-
-
-
-
-ACL 也算在 IAM 的管理裡面
-
-
-
-
+例如我建立了一個 EC2 ，我可以針對我建立的 EC2 指定它的 Role，設定它擁有 S3 的讀取權限。
 
 
 
 # 結論
 
-IAM 是 AWS 在資安管控上最基本的必修課。清楚了解它的功能對於日後在設計網站的時候也能提供不少權限控制的想法。
+IAM 是 AWS 在資安管控上最基本的必修課。清楚了解它的功能對於日後在設計軟體時也能提供不少權限控制的想法。
 
-而且 AWS 也提供很大的彈性
+而且 AWS 也提供很大的彈性去調整，可以針對實際遇到的狀況去進行調整。
 
+了解 IAM 能做什麼，Policy 可以怎麼寫，對於日後需要客製化存取 AWS 服務能更快速、準確的寫對。
 
-
-
+如果使用情境單純，不妨使用 AWS 現有的角色去去達成您的需求。
 
 
 
@@ -300,7 +294,6 @@ IAM 是 AWS 在資安管控上最基本的必修課。清楚了解它的功能�
 
 [AWS 角色功能](https://docs.aws.amazon.com/zh_tw/IAM/latest/UserGuide/access_policies_job-functions.html)
 
-https://docs.aws.amazon.com/IAM/latest/UserGuide/intro-structure.html
+[了解 IAM 的運作方式](https://docs.aws.amazon.com/IAM/latest/UserGuide/intro-structure.html)
 
-
-
+[AWS 的 ABAC 是什麼？ - AWS Identity and Access Management (amazon.com)](https://docs.aws.amazon.com/zh_tw/IAM/latest/UserGuide/introduction_attribute-based-access-control.html)

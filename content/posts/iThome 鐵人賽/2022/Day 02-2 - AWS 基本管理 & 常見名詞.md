@@ -1,4 +1,13 @@
+---
+title: "Day 02-2 - AWS 基本管理 & 常見名詞"
+date: 2022-09-17T23:44:09+08:00
+draft: false
+tags: [ '14th鐵人賽', 'AWS' ]
+type: posts
 
+toc:
+  enable: true
+---
 
 [TOC]
 
@@ -6,14 +15,14 @@
 
 # AWS 服務等級
 
-分為三個等級:
+AWS 的服務主要可以分為三個等級:
 
-- Global 
+- **Global** 
   - 全球等級
-- Region
+- **Region**
   - 各大洲不同國家有不同區域
   - 例如亞太就有新加坡、東京、大阪等區域。
-- Available Zone
+- **Available Zone**
   - 類似資料中心
   - 例如新加坡的可用區域就有三個
 
@@ -27,23 +36,23 @@
 
 操作及管理 AWS 有以下幾種方式:
 
-- AWS Management Console
+- **AWS Management Console**
   - 基本上就是網頁介面，透過 Web 來操作及管理 AWS 資源。後續的文章我會 簡稱 Web Console。
 
-- CLI
+- **CLI**
   - 安裝在電腦上，可透過 Bash 的方式進行管理。
 
-- AWS API
+- **AWS API**
   - 可透過 Postman 直接呼叫 API 來管理。
 
-- SDK
+- **SDK**
   - AWS 提供各個程式語言的 SDK，可以供你存取 AWS 的資源或是使用 AWS 的資源。
 
 
 
 # 常見名詞
 
-- ARN
+- **ARN**
 
   - Amazon Resource Name: 你建立的服務會有一個 ARN，你建立的 IAM User 會有一個 ARN.... 
   - AWS 的世界都會使用 ARN 來做身分識別來做權限控制
