@@ -1,0 +1,145 @@
+# Day 01-2 - 了解證照的考試內容 & 了解其他雲的狀況
+
+
+[TOC]
+
+
+
+# 先看看 AWS 官方怎麼說
+
+首先到 [AWS 的官網](https://aws.amazon.com/tw/certification/exams/) 查看認證內容，跟開發直接相關的有以下三種:
+![image-20220907105325391](https://raw.githubusercontent.com/kenhong4134/blog-for-it/main/content/posts/iThome%20%E9%90%B5%E4%BA%BA%E8%B3%BD/2022/images/img_20200916001.png)
+
+- Developer Associate
+- Solutions Architect Associate
+- Solutions Architect Professional
+
+這邊不特別挑 DevOps Engineer Professional 是因為這個比較偏 CI/CD，每間公司的部屬方式跟工具也都不太一樣。
+
+不過這 30 天我也會帶到 AWS Cloudformation 的內容，會有一些簡單的 CI/CD 展示。
+
+> 關於 CI/CD 更進一步的認識，我會在之後的鐵人賽或是文章做分享
+
+接著我透過 [AWS 的培訓與認證官網](https://aws.amazon.com/tw/training/events/) 的考前準備，還有  說明各個認證要檢驗你那些能力跟考試內容。
+
+## Developer Associate
+驗證內容: 是否能在 AWS 雲端上開發和維護應用程式。
+對象: 具備開發和維護 AWS 應用程式一年以上實作經驗的個人
+
+考試內容:
+- 至少對一種高階程式設計語言具備深入的了解
+- 了解核心 AWS 服務，使用服務，以及基本 AWS 架構最佳實務，包括 AWS 共同的責任模型、應用程式生命週期管理和開發處理中容器的使用
+- 使用 AWS 開發、部署和對以雲端為基礎的應用程式偵錯，以及為無伺服器應用程式編寫程式碼的能力。
+- 能夠識別 AWS 服務的關鍵功能，使用 AWS 服務 API、AWS CLI 和開發套件撰寫應用程式
+- 能夠將對雲端原生應用程式的基本理解應用在撰寫程式碼
+- 能夠對 AWS 上的程式碼模組進行編寫、維護以及偵錯
+
+## Solutions Architect Associate
+驗證內容: 是否能在 AWS 設計和部署可擴展、高度可用和具容錯能力之系統。
+對象: 具備一年以上實際使用 AWS 設計高可用性、符合成本效益、容錯和可擴展分散式系統的人員
+
+考試內容:
+- 使用 AWS 一年的實作經驗，包括使用運算、聯網、儲存和資料庫 AWS 服務，以及 AWS 部署和管理服務
+- 在 AWS 上部署、管理和操作工作負載，以及實作安全控制和合規要求的經驗
+- 熟悉使用 AWS 管理主控台與 AWS 命令列界面 (CLI)
+- 了解 AWS Well-Architected Framework、AWS 聯網、安全服務以及 AWS 全球基礎設施
+識別哪些 AWS 服務滿足指定技術要求和定義 AWS 型應用程式之技術要求的能力
+
+## Solutions Architect – Professional
+
+驗證內容: 是否能在 AWS 上設計分散式應用程式和系統的進階技術能力和經驗。
+對象: 具備兩年以上在 AWS 設計和部署雲端架構實作經驗的個人。
+
+考試內容:
+- 熟悉 AWS CLI、AWS API、AWS CloudFormation 範本、AWS 帳單主控台和 AWS 管理主控台、指令碼語言，以及 Windows 和 Linux 環境
+- 能夠提供跨企業多個應用程式和專案的架構設計最佳實務指引，以及將商業目標對應至應用程式/架構要求
+- 具備評估雲端應用程式需求的能力，以及針對在 AWS 上實作、部署和佈建應用程式，提供架構建議
+- 能夠使用關鍵 AWS 技術 (例如 VPN、AWS Direct Connect) 以及持續整合和部署程序來設計混合架構
+
+
+
+
+
+# 學習 Roadmap 總結
+目前先以 Developer Associate 跟 Solutions Architect Associate 作為考試的準備目標
+
+基本上要有幾個基本的 IT 能力:
+- 至少會一種高階語言 ( JAVA, C#, Python, Javascript ....)
+- 了解應用程式的生命週期及管理
+- 有能力撰寫 Serverless 應用程式
+- 了解開發過程中，容器上的使用
+
+
+
+我們依不同實際使用情境的不同，在 AWS 也可能會有以下幾種架構的設計產生:
+
+- 經典應用架構
+- 容器化架構
+- 高併發架構
+- 大數據架構
+- Serverless 架構
+- 混合雲架構
+- Devops 架構
+
+
+
+我會以使用到的架構，來說明會用到的 AWS 服務
+其他沒有用到的 AWS 雖然可能不在以上架構裡面
+但是我還是一樣會拉出來說明例如: Cognito
+
+
+
+鐵人賽完賽後我希望能擁有跟證照希望我們擁有的 AWS 的能力，如下:
+
+- 了解 AWS Service API, CLI 來管理 AWS 服務，使用 SDK 來撰寫應用程式
+- 識別 AWS 各個服務的關鍵特徵
+- [AWS 責任共擔模式](https://aws.amazon.com/compliance/shared-responsibility-model/)
+- 使用 CI/CD Pipeline 去佈署應用程式
+- 使用 AWS security best practices (例如使用 IAM Role 取代 secret 和 access key)
+- 能編寫、維護、偵錯程式碼模組
+
+
+
+
+
+# 了解其他雲的狀況
+
+## 各個雲的服務取代
+
+這部分我在 Azure 發現它很貼心地告訴你如果要從 AWS 移轉到 Azure 有哪些服務可以使用 (甚至從 GCP 移轉到 Azure 也有)
+
+而且我覺得也寫得不錯，各位可以到參考資料尋找一下，另外我也有找到另外一張圖，方便你在有其他雲的基礎下去查有哪些對應服務
+
+![img](https://raw.githubusercontent.com/kenhong4134/blog-for-it/main/content/posts/iThome%20%E9%90%B5%E4%BA%BA%E8%B3%BD/2022/images/Cloud_comparsion.jpg)
+
+## 優缺點
+
+
+
+優缺點可參考 [sereno 的分析](https://www.serenoclouds.com/blog/%E9%9B%B2%E7%AB%AF%E5%B9%B3%E5%8F%B0%E6%AF%94%E8%BC%83%EF%BC%9Aazure%E3%80%81aws%E3%80%81gcp/)
+
+就我認為 Azure 對於台灣很多公司使用 Windows Server 等相關 Solution 來說是有優勢的。畢竟是自家產品，上雲都有一些 Migration 工具。
+
+AWS 則是因為最早推出市場，所以技術跟教學培訓資源相對較多以及完整。
+
+GCP 在 AI 、 數據分析的能力無庸置疑，在大數據分析、機器學習的技術力相對較強。
+
+
+
+## 架構參考
+如果以架構中心來說，AWS 跟 Azure 都有提供，Google 的我找不到
+
+我個人覺得 Azure 的架構中心寫的比較簡單易懂，比較適合我閱讀 (也有可能是我曾經看微軟的文件看習慣了?)
+
+> AWS 跟 Azure 的架構中心我就放在參考資料了
+
+
+
+# 參考資料
+- [AWS 與 Azure 服務相比](https://docs.microsoft.com/zh-tw/azure/architecture/aws-professional/services)
+- [AWS VS Azure VS Google – Cloud Comparison](https://labs.sogeti.com/aws-vs-azure-vs-google-cloud-comparison/)
+- [雲端平台比較：Azure、AWS、GCP](https://www.serenoclouds.com/blog/%E9%9B%B2%E7%AB%AF%E5%B9%B3%E5%8F%B0%E6%AF%94%E8%BC%83%EF%BC%9Aazure%E3%80%81aws%E3%80%81gcp/)
+- [Azure 架構中心](https://docs.microsoft.com/zh-tw/azure/architecture/)
+- [AWS 架構中心](https://aws.amazon.com/tw/architecture/)
+
+
